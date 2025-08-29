@@ -1,5 +1,3 @@
-# retail-insight-genie-rag
-Lightweight retrieval‑augmented generation (RAG) bot for retail data. Uses TF‑IDF retrieval plus a simple response composer. Includes sample retail documents and a FastAPI endpoint for interactive querying.
 # Retail Insight Genie — RAG Bot
 
 A lightweight retrieval‑augmented generation (RAG) system for answering questions about retail products and catalog information.
@@ -27,3 +25,57 @@ cd retail-insight-genie-rag
 python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
+```
+
+## Running the API
+
+Start the FastAPI server with:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Then query the API:
+
+```bash
+curl -X POST http://localhost:8000/ask -H "Content-Type: application/json" -d '{"query": "What is the battery life of the Pro laptop?"}'
+```
+
+You can also interact via the API docs at `http://localhost:8000/docs`.
+
+## Evaluation
+
+To run the evaluation harness on the sample query set:
+
+```bash
+python app/evaluate.py --k 3
+```
+
+This will print retrieval precision metrics.
+
+## Project Structure
+
+```
+retail-insight-genie-rag/
+├── app/                 # FastAPI application and RAG pipeline
+│   ├── main.py
+│   ├── rag.py
+│   ├── data/
+│   ├── evaluate.py
+│   └── …
+├── tests/               # Unit tests (pytest)
+├── requirements.txt
+├── Dockerfile
+├── .github/workflows/python-ci.yml
+├── .gitignore
+├── LICENSE
+└── README.md
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or pull requests. See `CONTRIBUTING.md` for guidelines.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.

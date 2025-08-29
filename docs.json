@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "title": "Pro Laptop",
+    "description": "The Pro Laptop features a long battery life of up to 12 hours, with a high‑performance CPU and 16GB of RAM."
+  },
+  {
+    "id": 1,
+    "title": "Smartphone X",
+    "description": "Smartphone X comes with an edge‑to‑edge display and a powerful camera system that captures stunning photos and videos."
+  },
+  {
+    "id": 2,
+    "title": "Wireless Earbuds",
+    "description": "Wireless earbuds with noise‑cancellation technology and eight hours of continuous battery life."
+  },
+  {
+    "id": 3,
+    "title": "Tablet Plus",
+    "description": "Tablet Plus offers a 10‑inch display perfect for entertainment and productivity on the go."
+  },
+  {
+    "id": 4,
+    "title": "Gaming Console",
+    "description": "Next‑generation gaming console with immersive graphics and fast load times for an unparalleled gaming experience."
+  }
+]
